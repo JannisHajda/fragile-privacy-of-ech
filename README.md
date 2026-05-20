@@ -2,6 +2,18 @@
 
 This repository contains the measurement code, analysis pipelines, and aggregated datasets necessary for reproducing and validating the results of our IFIP Networking 2026 paper.
 
-## 🚧 Repository Status
+Authors: Jannis Hajda, Bengin Oezdil, John Bauer, Felix Hoffmann, and Vaibhav Bajpai
 
-**Note:** This repository is currently being prepared for public release. The full suite of source code, and aggregated datasets will be made available here to coincide with our presentation at the IFIP Networking 2026 conference.
+## Repository Structure
+
+* **`server-side-landscape/`**
+  Contains the source code and aggregated data for evaluating the global server-side ECH deployment landscape. 
+
+* **`mozilla-telemetry/`**
+  Contains the notebooks and database schemas for reproducing our client-side ECH adoption using aggregated Mozilla Firefox telemetry. 
+  
+* **`doech/`**
+  Contains the code and datasets for reproducing the active browser measurements using our custom browser extension. 
+---
+
+Please navigate to the `README.md` inside any of the subfolders to begin reproducing a specific experiment!

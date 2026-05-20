@@ -1,0 +1,1 @@
+CREATE TABLE default.mozilla_telemetry_outliers\n(\n    `day` Date,\n    `metric` LowCardinality(String),\n    `country_code` LowCardinality(String)\n)\nENGINE = MergeTree\nORDER BY (day, metric, country_code)\nSETTINGS index_granularity = 8192

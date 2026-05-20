@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/lib/chart.umd.min.js"></script>
+    <script src="/lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="/styles/output.css" />
+  </head>
+
+  <body class="h-screen overflow-hidden">
+    <div class="bg-slate-800 h-full flex flex-col text-slate-100 text-base">
+      <header
+        class="h-16 bg-slate-700 text-slate-100 flex items-center p-5 border-b-2 border-slate-600"
+      >
+        <h2 class="logo text-xl grow flex flex-row items-center">
+          <img src="/icons/shield.svg" class="h-6 w-6 mr-0.5" alt="icon" />
+          <span>doech</span>
+        </h2>
+        <div class="flex justify-center items-center">
+          <div id="reset" class="mr-2 cursor-pointer" title="Reset">
+            <img src="/icons/refresh.svg" alt="Reset" class="h-6 w-6" />
+          </div>
+          <div id="export" class="cursor-pointer" title="Export">
+            <img src="/icons/save.svg" alt="Save" class="h-6 w-6" />
+          </div>
+        </div>
+      </header>
+
+      <main
+        class="flex flex-grow max-w-2xl flex-col mx-auto mt-5 px-5 w-full overflow-hidden"
+      >
+        <div class="flex">
+          <button
+            id="showPrimaryRequests"
+            class="bg-slate-700 rounded-r-md grow flex justify-center items-center h-10"
+          >
+            Primary Requests
+          </button>
+          <button
+            id="showAllRequests"
+            class="bg-slate-900 rounded-l-md grow flex justify-center items-center h-10"
+          >
+            All Requests
+          </button>
+        </div>
+
+        <hr class="border-slate-600 my-10" />
+
+        <div class="shrink-0">
+          <canvas id="chart"></canvas>
+        </div>
+
+        <hr class="border-slate-600 my-10" />
+
+        <div id="noRequests" class="text-slate-100 flex justify-center">
+          <h2 class="text-xl">No primary requests found.</h2>
+        </div>
+
+        <div id="requests" class="overflow-y-auto grow w-full text-white"></div>
+        <script src="sidebar.js"></script>
+      </main>
+    </div>
+  </body>
+</html>
