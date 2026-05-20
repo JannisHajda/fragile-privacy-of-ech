@@ -1,3 +1,4 @@
 *.parquet[[:space:]]*.csv filter=lfs diff=lfs merge=lfs -text
 doech/results/* filter=lfs diff=lfs merge=lfs -text
 server-side-landscape/analysis/data/measurements/* filter=lfs diff=lfs merge=lfs -text
+mozilla-telemetry/data/parquet/telemetry_outliers.parquet filter=lfs diff=lfs merge=lfs -text
